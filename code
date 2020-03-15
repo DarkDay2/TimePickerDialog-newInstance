@@ -1,0 +1,14 @@
+import java.util.Calendar;
+
+//there is an error at .newInstance and I don't know why
+
+public void setTime(View v){
+        Calendar now = Calendar.getInstance();
+        TimePickerDialog tpd = TimePickerDialog.newInstance(this, //there is an error at .newInstance and I don't know why
+                now.get(Calendar.HOUR_OF_DAY),
+                now.get(Calendar.MINUTE),
+                false);
+        tpd.show(getFragmentManager(), "Timepickerdialog");
+    }
+    
+    
